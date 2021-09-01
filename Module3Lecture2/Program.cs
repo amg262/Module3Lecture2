@@ -54,6 +54,10 @@ namespace Module3Lecture2
                 totalJars24 = jars24 * 7;
                 total += totalJars24;
             }
+
+            Console.WriteLine($"For {jars12} 12oz jars the price is {totalJars12:C}");
+            Console.WriteLine($"For {jars24} 24oz jars the price is {totalJars24:C}");
+            Console.WriteLine($"Total cost: {total:C}");
         }
     }
 }
