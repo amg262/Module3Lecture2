@@ -167,9 +167,32 @@ namespace Module3Lecture2
                 Console.WriteLine("Enter your age>");
                 age = Convert.ToInt32(Console.ReadLine());
             }
+
             Console.WriteLine(age);
             return age;
         }
+
+        static int GetAge2()
+        {
+            int age = 0;
+            Console.WriteLine("Enter your age>");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            //Trys to parse string as int, if cant stores 0
+            //this is better! builds in validation
+            Int32.TryParse(Console.ReadLine(), out age);
+
+            while (age < 0 || age > 150)
+            {
+                Console.WriteLine("Invalid entry.");
+                Console.WriteLine("Enter your age>");
+                Int32.TryParse(Console.ReadLine(), out age);
+            }
+
+            Console.WriteLine(age);
+            return age;
+        }
+
 
         static void Main(string[] args)
         {
@@ -182,7 +205,8 @@ namespace Module3Lecture2
             // ClairvoyanceTest(inputNum);
             //PrefixPostfix();
             //Loop();
-            GetAge();
+            //GetAge();
+            GetAge2();
         }
     }
 }
