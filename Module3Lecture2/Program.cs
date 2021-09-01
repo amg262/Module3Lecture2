@@ -155,6 +155,22 @@ namespace Module3Lecture2
             }
         }
 
+        static int GetAge()
+        {
+            int age = 0;
+            Console.WriteLine("Enter your age>");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            while (age < 0 || age > 150)
+            {
+                Console.WriteLine("Invalid entry.");
+                Console.WriteLine("Enter your age>");
+                age = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine(age);
+            return age;
+        }
+
         static void Main(string[] args)
         {
             //HoneyJarApp();
@@ -165,7 +181,8 @@ namespace Module3Lecture2
             // int inputNum = Convert.ToInt32(Console.ReadLine());
             // ClairvoyanceTest(inputNum);
             //PrefixPostfix();
-            Loop();
+            //Loop();
+            GetAge();
         }
     }
 }
