@@ -25,7 +25,27 @@ namespace Module3Lecture2
             return count;
         }
 
-        static void Main(string[] args)
+        static void SayHi()
+        {
+            Console.WriteLine("Hi!");
+        }
+
+        static double GetTaxRate(string state)
+        {
+            double tax;
+            if (state.Equals("WI"))
+            {
+                return .05;
+            } else if (state.Equals("MN"))
+            {
+                return .0634;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        static void HoneyJarApp()
         {
             /*
              * Create a program for a bee farm
@@ -58,6 +78,12 @@ namespace Module3Lecture2
             Console.WriteLine($"For {jars12} 12oz jars the price is {totalJars12:C}");
             Console.WriteLine($"For {jars24} 24oz jars the price is {totalJars24:C}");
             Console.WriteLine($"Total cost: {total:C}");
+        }
+        static void Main(string[] args)
+        {
+            //HoneyJarApp();
+            double tax = GetTaxRate("WI");
+            Console.WriteLine(tax);
         }
     }
 }
