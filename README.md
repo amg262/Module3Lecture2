@@ -8,5 +8,6 @@ number = 10;
 WriteLine(--number) -> prints 9
 WriteLine(number++) -> prints 10
 
-
 WriteLine($("Best string interpolation for {number}"))
+
+Int32.TryParse(Console.ReadLine(), out age);  ->  This is the best way as it builds in validation. ADVANCED
