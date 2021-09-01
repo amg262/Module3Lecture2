@@ -189,6 +189,34 @@ namespace Module3Lecture2
                 Int32.TryParse(Console.ReadLine(), out age);
             }
 
+            int option = 0;
+
+            do
+            {
+                Console.WriteLine("1. Option One 2. Option Two 3. Exit\n");
+                //option = Convert.ToInt32(Console.ReadLine());
+                
+                // Again - using advanced, better way of TryParse
+                Int32.TryParse(Console.ReadLine(), out option);
+
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("1 + 2 = 3");
+                        break;
+                    case 2:
+                        Console.WriteLine("3 - 2 = 1");
+                        break;
+                    case 3:
+                        Console.WriteLine("Bye!");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid");
+                        break;
+                }
+            } while (option != 3);
+
+
             Console.WriteLine(age);
             return age;
         }
