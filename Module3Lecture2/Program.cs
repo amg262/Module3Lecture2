@@ -36,7 +36,8 @@ namespace Module3Lecture2
             if (state.Equals("WI"))
             {
                 return .05;
-            } else if (state.Equals("MN"))
+            }
+            else if (state.Equals("MN"))
             {
                 return .0634;
             }
@@ -45,7 +46,7 @@ namespace Module3Lecture2
                 return 0;
             }
         }
-        
+
         /*
          * method that returns the above AskForPurchase, GetJarsCount methods
 
@@ -119,16 +120,52 @@ namespace Module3Lecture2
                 ClairvoyanceTest(Convert.ToInt32(Console.ReadLine()));
             }
         }
-        
+
+        static void PrefixPostfix()
+        {
+            //prefixing evaluates and adds to number variable BEFORE anything else
+            int number = 10;
+            Console.WriteLine(number);
+            Console.WriteLine(++number);
+            Console.WriteLine(number);
+            Console.WriteLine(number++);
+            Console.WriteLine(number);
+        }
+
+
+        /*
+         * Get input for loop number - output loop iteration and string interpolation
+         * that displays and decrease at same code
+         */
+        static void Loop()
+        {
+            Console.WriteLine("How many loops?");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if (number > 10 || number < 0)
+            {
+                Console.WriteLine("Nope");
+            }
+            else
+            {
+                while (number > 0)
+                {
+                    Console.WriteLine($"Loop: {number--}");
+                }
+            }
+        }
+
         static void Main(string[] args)
         {
             //HoneyJarApp();
             // double tax = GetTaxRate("WI");
             // Console.WriteLine(tax);
 
-            Console.WriteLine("Input number>");
-            int inputNum = Convert.ToInt32(Console.ReadLine());
-            ClairvoyanceTest(inputNum);
+            // Console.WriteLine("Input number>");
+            // int inputNum = Convert.ToInt32(Console.ReadLine());
+            // ClairvoyanceTest(inputNum);
+            //PrefixPostfix();
+            Loop();
         }
     }
 }

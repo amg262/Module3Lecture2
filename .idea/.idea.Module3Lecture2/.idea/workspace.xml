@@ -4,7 +4,10 @@
     <projectFile>Module3Lecture2/Module3Lecture2.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed828807-2f49-480d-979e-dd3e9215d8d5" name="Changes" comment="" />
+    <list default="true" id="ed828807-2f49-480d-979e-dd3e9215d8d5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Module3Lecture2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Module3Lecture2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3Lecture2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Module3Lecture2/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630515878733</updated>
-      <workItem from="1630515888060" duration="4422000" />
+      <workItem from="1630515888060" duration="5510000" />
     </task>
     <servers />
   </component>
