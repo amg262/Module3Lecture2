@@ -45,6 +45,11 @@ namespace Module3Lecture2
                 return 0;
             }
         }
+        
+        /*
+         * method that returns the above AskForPurchase, GetJarsCount methods
+
+         */
         static void HoneyJarApp()
         {
             /*
@@ -79,11 +84,51 @@ namespace Module3Lecture2
             Console.WriteLine($"For {jars24} 24oz jars the price is {totalJars24:C}");
             Console.WriteLine($"Total cost: {total:C}");
         }
+
+        /*
+         * Generate number between 1 - 10
+         */
+        static int GenerateNumber()
+        {
+            return new Random().Next(1, 11);
+        }
+
+        /*
+         * Method that takes user number and checks if between 1 - 10
+         * If <= 10 -> check value against random number generated in
+         * GenerateNumber() method.
+         * If > 10  -> value is invalid, prompt users and recursively call function
+         */
+        static void ClairvoyanceTest(int randNum)
+        {
+            int actual = GenerateNumber();
+            if (randNum <= 10)
+            {
+                if (randNum == actual)
+                {
+                    Console.WriteLine($"Guess: {randNum}  Actual: {actual}  -  You ARE clairvoyant!");
+                }
+                else
+                {
+                    Console.WriteLine($"Guess: {randNum}  Actual: {actual}  -  You ARE NOT NOT! clairvoyant!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Input number between 1 & 10");
+                ClairvoyanceTest(Convert.ToInt32(Console.ReadLine()));
+            }
+        }
+        
         static void Main(string[] args)
         {
             //HoneyJarApp();
-            double tax = GetTaxRate("WI");
-            Console.WriteLine(tax);
+            // double tax = GetTaxRate("WI");
+            // Console.WriteLine(tax);
+
+            Console.WriteLine("Input number>");
+            int inputNum = Convert.ToInt32(Console.ReadLine());
+            ClairvoyanceTest(inputNum);
         }
     }
 }
