@@ -193,9 +193,13 @@ namespace Module3Lecture2
 
             do
             {
+                // Need Pausing -> ReadKey(); which waits for 1 keystroke
+                // This clears console
+                Console.Clear();
+                
                 Console.WriteLine("1. Option One 2. Option Two 3. Exit\n");
                 //option = Convert.ToInt32(Console.ReadLine());
-                
+
                 // Again - using advanced, better way of TryParse
                 Int32.TryParse(Console.ReadLine(), out option);
 
@@ -214,6 +218,10 @@ namespace Module3Lecture2
                         Console.WriteLine("Invalid");
                         break;
                 }
+
+                // Pauses for key to be entered
+                Console.ReadKey();
+                
             } while (option != 3);
 
 
